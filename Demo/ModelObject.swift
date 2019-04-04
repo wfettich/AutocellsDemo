@@ -35,6 +35,8 @@ public struct ModelObject: Codable, Equatable
         let r = Int(arc4random_uniform(UInt32(lorem.count)))
         
         result.text = String(lorem.prefix(r)) + " \(r) chars"
+        result.image = r % 2 == 0 ? #imageLiteral(resourceName: "demo2") : #imageLiteral(resourceName: "demo1") 
+//        result.image = r % 3 == 0 ? #imageLiteral(resourceName: "demo2") : r % 3 == 1 ? #imageLiteral(resourceName: "demo1") : nil
         
         return result
     }

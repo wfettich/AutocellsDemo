@@ -16,23 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-Vb-BIR">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-Vb-BIR">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-3L-t5F">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="X5k-3L-t5F" secondAttribute="height" multiplier="1:1" id="Mb6-fr-vWx"/>
-                            </constraints>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="310" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-3L-t5F">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhq-U1-CcY">
-                            <rect key="frame" x="0.0" y="320" width="320" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhq-U1-CcY">
+                            <rect key="frame" x="0.0" y="310" width="320" height="100"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
-                            <rect key="frame" x="0.0" y="340.5" width="320" height="159.5"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
+                            <rect key="frame" x="0.0" y="410" width="320" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1kE-C7-QMS"/>
@@ -49,7 +46,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vZo-Vb-BIR" secondAttribute="bottom" id="GQF-aA-vQK"/>
                 <constraint firstItem="vZo-Vb-BIR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P13-WP-etQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vZo-Vb-BIR" secondAttribute="trailing" id="fe5-0a-2L8"/>
-                <constraint firstItem="vZo-Vb-BIR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pPh-dX-Zlk"/>
+                <constraint firstItem="vZo-Vb-BIR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yLt-lU-HTz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

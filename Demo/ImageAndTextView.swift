@@ -22,8 +22,15 @@ class ImageAndTextView: UIView
         {
             guard modelObject != nil else {return}
             
-            viewImage.isHidden = true
-            //viewImage.image = modelObject?.urlImage //to do: get image from url
+            if let image = modelObject!.image
+            {
+                viewImage.image = image
+            }
+            else
+            {
+                viewImage.isHidden = true
+            }
+            
             viewText.text = "text view: " + (modelObject!.text ?? "")  + " END text view"
             labelText.text = "label: " + (modelObject!.text ?? "") + " END label"
 
@@ -32,17 +39,24 @@ class ImageAndTextView: UIView
         }
     }
     
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        
+//        translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     override func layoutSubviews()
     {
         super.layoutSubviews()
         
 //        let largeSize = CGSize(width:self.bounds.width,height:5000)
 //        let neededSize = self.viewText.sizeThatFits(largeSize)
-//        
+//
 //        if self.viewText.bounds.height < neededSize.height
 //        {
 //            heightTextView.constant = neededSize.height
-//            
+//
 //            setNeedsUpdateConstraints()
 //        }
     }
