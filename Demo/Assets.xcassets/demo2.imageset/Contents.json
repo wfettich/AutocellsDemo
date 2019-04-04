@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "image-demo-b.png"
+      "filename" : "image-demo-no-alpha.png"
     }
   ],
   "info" : {

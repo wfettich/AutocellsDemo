@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ImageAndTextView: UIView
 {
@@ -32,10 +33,10 @@ class ImageAndTextView: UIView
             }
             
             viewText.text = "text view: " + (modelObject!.text ?? "")  + " END text view"
+            viewText.isHidden = true
             labelText.text = "label: " + (modelObject!.text ?? "") + " END label"
 
-            setNeedsUpdateConstraints()
-            setNeedsLayout()
+            layoutSubviews()
         }
     }
     
@@ -43,12 +44,25 @@ class ImageAndTextView: UIView
     {
         super.awakeFromNib()
         
-//        translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func layoutSubviews()
     {
         super.layoutSubviews()
+        
+        if let image = viewImage.image
+        {
+            let neededBounds = AVMakeRect(aspectRatio: image.size, insideRect: viewImage.bounds)
+
+            if self.viewImage.bounds.size != neededBounds.size
+            {
+                viewImage.bounds = CGRect(origin: CGPoint(x:0,y:0),size:neededBounds.size)
+
+                superview?.layoutSubviews()
+            }
+        }
+
         
 //        let largeSize = CGSize(width:self.bounds.width,height:5000)
 //        let neededSize = self.viewText.sizeThatFits(largeSize)

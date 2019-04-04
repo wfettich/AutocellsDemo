@@ -16,20 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-Vb-BIR">
+                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-Vb-BIR">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="310" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-3L-t5F">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhq-U1-CcY">
-                            <rect key="frame" x="0.0" y="310" width="320" height="100"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhq-U1-CcY">
+                            <rect key="frame" x="0.0" y="200" width="320" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
-                            <rect key="frame" x="0.0" y="410" width="320" height="90"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
+                            <rect key="frame" x="0.0" y="300" width="320" height="200"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1kE-C7-QMS"/>
@@ -39,9 +41,10 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
+                    <color key="backgroundColor" red="1" green="0.32549019610000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.13226101809999999" green="0.90887230500000005" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vZo-Vb-BIR" secondAttribute="bottom" id="GQF-aA-vQK"/>
                 <constraint firstItem="vZo-Vb-BIR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P13-WP-etQ"/>
