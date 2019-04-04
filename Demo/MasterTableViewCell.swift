@@ -10,7 +10,7 @@ import UIKit
 
 class MasterTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var viewImageAndText: ImageAndTextView2!
+    @IBOutlet weak var viewImageAndText: ImageAndTextView!
     
     var modelObject:ModelObject?
     {

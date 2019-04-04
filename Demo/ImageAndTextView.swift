@@ -35,8 +35,8 @@ class ImageAndTextView: UIView
             viewText.text = "text view: " + (modelObject!.text ?? "")  + " END text view"
             viewText.isHidden = true
             labelText.text = "label: " + (modelObject!.text ?? "") + " END label"
-
-            layoutSubviews()
+            
+            setNeedsLayout()
         }
     }
     
@@ -47,51 +47,6 @@ class ImageAndTextView: UIView
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    override func layoutSubviews()
-    {
-        super.layoutSubviews()
-        
-        if let image = viewImage.image
-        {
-            let neededBounds = AVMakeRect(aspectRatio: image.size, insideRect: viewImage.bounds)
-
-            if self.viewImage.bounds.size != neededBounds.size
-            {
-                viewImage.bounds = CGRect(origin: CGPoint(x:0,y:0),size:neededBounds.size)
-
-                superview?.layoutSubviews()
-            }
-        }
-
-        
-//        let largeSize = CGSize(width:self.bounds.width,height:5000)
-//        let neededSize = self.viewText.sizeThatFits(largeSize)
-//
-//        if self.viewText.bounds.height < neededSize.height
-//        {
-//            heightTextView.constant = neededSize.height
-//
-//            setNeedsUpdateConstraints()
-//        }
-    }
-    
-    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
-    {
-        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
-        
-        return calculatedSize
-        /*
-        let largeSize = CGSize(width:calculatedSize,height:5000)
-        let neededSize = self.viewText.sizeThatFits(largeSize)
-        
-        if self.viewText.bounds.height < neededSize.height
-        {
-            heightTextView.constant = neededSize.height
-            
-            setNeedsUpdateConstraints()
-        }
-         */
-    }
     
     override func awakeAfter(using aDecoder: NSCoder) -> Any? {
         guard subviews.isEmpty else {

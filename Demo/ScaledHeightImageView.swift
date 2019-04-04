@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+/*
+Kudos to olearj234 for making this
+ 
+https://stackoverflow.com/questions/41154784/how-to-resize-uiimageview-based-on-uiimages-size-ratio-in-swift-3
+*/
+ 
 class ScaledHeightImageView: UIImageView {
     
     override var intrinsicContentSize: CGSize {
