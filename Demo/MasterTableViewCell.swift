@@ -10,7 +10,7 @@ import UIKit
 
 class MasterTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var viewImageAndText: ImageAndTextView2!
+    @IBOutlet weak var viewImageAndText: ImageOnly!
     
     var modelObject:ModelObject?
     {
@@ -23,21 +23,15 @@ class MasterTableViewCell: UITableViewCell
     {
         super.awakeFromNib()
         
-//        translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
         // Initialization code
     }
     
-//    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
-//    {
-//        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
-//        
-//        return calculatedSize
-//    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
+    {
+        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
+        
+        return calculatedSize
     }
     
 }

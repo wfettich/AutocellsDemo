@@ -12,12 +12,14 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail.text
+                imageView.image = detail.image
             }
         }
     }
@@ -28,7 +30,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
+    var detailItem: ModelObject? {
         didSet {
             // Update the view.
             configureView()
