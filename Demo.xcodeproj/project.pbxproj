@@ -15,6 +15,11 @@
 		B6A1145C2255FDB100E78E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A1145A2255FDB100E78E24 /* LaunchScreen.storyboard */; };
 		B6A114672255FDB100E78E24 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114662255FDB100E78E24 /* DemoTests.swift */; };
 		B6A114722255FDB100E78E24 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114712255FDB100E78E24 /* DemoUITests.swift */; };
+		B6A114812255FDDB00E78E24 /* ImageAndTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1147F2255FDDB00E78E24 /* ImageAndTextView.swift */; };
+		B6A114822255FDDB00E78E24 /* ImageAndTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114802255FDDB00E78E24 /* ImageAndTextView.xib */; };
+		B6A114842255FDE500E78E24 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114832255FDE500E78E24 /* ModelObject.swift */; };
+		B6A114872255FED600E78E24 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114852255FED600E78E24 /* MasterTableViewCell.swift */; };
+		B6A114882255FED600E78E24 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114862255FED600E78E24 /* MasterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		B6A1146D2255FDB100E78E24 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A114712255FDB100E78E24 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		B6A114732255FDB100E78E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A1147F2255FDDB00E78E24 /* ImageAndTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAndTextView.swift; sourceTree = "<group>"; };
+		B6A114802255FDDB00E78E24 /* ImageAndTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageAndTextView.xib; sourceTree = "<group>"; };
+		B6A114832255FDE500E78E24 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
+		B6A114852255FED600E78E24 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		B6A114862255FED600E78E24 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,11 @@
 				B6A114552255FDB000E78E24 /* Main.storyboard */,
 				B6A114582255FDB100E78E24 /* Assets.xcassets */,
 				B6A1145A2255FDB100E78E24 /* LaunchScreen.storyboard */,
+				B6A1147F2255FDDB00E78E24 /* ImageAndTextView.swift */,
+				B6A114802255FDDB00E78E24 /* ImageAndTextView.xib */,
+				B6A114832255FDE500E78E24 /* ModelObject.swift */,
+				B6A114852255FED600E78E24 /* MasterTableViewCell.swift */,
+				B6A114862255FED600E78E24 /* MasterTableViewCell.xib */,
 				B6A1145D2255FDB100E78E24 /* Info.plist */,
 			);
 			path = Demo;
@@ -235,6 +250,8 @@
 				B6A1145C2255FDB100E78E24 /* LaunchScreen.storyboard in Resources */,
 				B6A114592255FDB100E78E24 /* Assets.xcassets in Resources */,
 				B6A114572255FDB000E78E24 /* Main.storyboard in Resources */,
+				B6A114822255FDDB00E78E24 /* ImageAndTextView.xib in Resources */,
+				B6A114882255FED600E78E24 /* MasterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A114542255FDB000E78E24 /* DetailViewController.swift in Sources */,
+				B6A114872255FED600E78E24 /* MasterTableViewCell.swift in Sources */,
 				B6A114522255FDB000E78E24 /* MasterViewController.swift in Sources */,
 				B6A114502255FDB000E78E24 /* AppDelegate.swift in Sources */,
+				B6A114842255FDE500E78E24 /* ModelObject.swift in Sources */,
+				B6A114812255FDDB00E78E24 /* ImageAndTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
