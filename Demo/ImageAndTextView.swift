@@ -14,6 +14,8 @@ class ImageAndTextView: UIView
     @IBOutlet weak var viewText: UITextView!
     @IBOutlet weak var labelText: UILabel!
     
+    @IBOutlet weak var heightTextView: NSLayoutConstraint!
+    
     var modelObject:ModelObject?
     {
         didSet
@@ -30,18 +32,38 @@ class ImageAndTextView: UIView
         }
     }
     
-//    override func layoutSubviews()
-//    {
-//        super.layoutSubviews()
-//
-//        if self.viewText.bounds.width != self.bounds.width
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        
+//        let largeSize = CGSize(width:self.bounds.width,height:5000)
+//        let neededSize = self.viewText.sizeThatFits(largeSize)
+//        
+//        if self.viewText.bounds.height < neededSize.height
 //        {
-//            self.viewText.preferredMaxLayoutWidth = self.bounds.width;
-//            viewText.sizeToFit()
-//
-//            heightConstraintAboutText.constant = labelAbout.bounds.size.height + 50
+//            heightTextView.constant = neededSize.height
+//            
+//            setNeedsUpdateConstraints()
 //        }
-//    }
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
+    {
+        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
+        
+        return calculatedSize
+        /*
+        let largeSize = CGSize(width:calculatedSize,height:5000)
+        let neededSize = self.viewText.sizeThatFits(largeSize)
+        
+        if self.viewText.bounds.height < neededSize.height
+        {
+            heightTextView.constant = neededSize.height
+            
+            setNeedsUpdateConstraints()
+        }
+         */
+    }
     
     override func awakeAfter(using aDecoder: NSCoder) -> Any? {
         guard subviews.isEmpty else {

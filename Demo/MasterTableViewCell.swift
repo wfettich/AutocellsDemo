@@ -24,6 +24,13 @@ class MasterTableViewCell: UITableViewCell
         super.awakeFromNib()
         // Initialization code
     }
+    
+//    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
+//    {
+//        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
+//        
+//        return calculatedSize
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
