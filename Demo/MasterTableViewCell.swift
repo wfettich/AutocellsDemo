@@ -10,7 +10,7 @@ import UIKit
 
 class MasterTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var viewImageAndText: ImageOnly!
+    @IBOutlet weak var viewImageAndText: ImageAndTextView2!
     
     var modelObject:ModelObject?
     {
@@ -25,13 +25,6 @@ class MasterTableViewCell: UITableViewCell
         
         translatesAutoresizingMaskIntoConstraints = false
         // Initialization code
-    }
-    
-    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
-    {
-        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
-        
-        return calculatedSize
     }
     
 }

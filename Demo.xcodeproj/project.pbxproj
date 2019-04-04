@@ -18,9 +18,9 @@
 		B6A114842255FDE500E78E24 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114832255FDE500E78E24 /* ModelObject.swift */; };
 		B6A114872255FED600E78E24 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114852255FED600E78E24 /* MasterTableViewCell.swift */; };
 		B6A114882255FED600E78E24 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114862255FED600E78E24 /* MasterTableViewCell.xib */; };
-		B6A114942256448F00E78E24 /* ImageOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114932256448F00E78E24 /* ImageOnly.swift */; };
-		B6A114962256449D00E78E24 /* ImageOnly.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114952256449D00E78E24 /* ImageOnly.xib */; };
 		B6A114D42256527C00E78E24 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114D32256527C00E78E24 /* ScaledHeightImageView.swift */; };
+		B6A114D52256544700E78E24 /* ImageAndTextView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1148B225631DF00E78E24 /* ImageAndTextView2.swift */; };
+		B6A114D62256544700E78E24 /* ImageAndTextView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A1148C225631DF00E78E24 /* ImageAndTextView2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,9 +258,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A114D62256544700E78E24 /* ImageAndTextView2.xib in Resources */,
 				B6A1145C2255FDB100E78E24 /* LaunchScreen.storyboard in Resources */,
 				B6A114592255FDB100E78E24 /* Assets.xcassets in Resources */,
-				B6A114962256449D00E78E24 /* ImageOnly.xib in Resources */,
 				B6A114572255FDB000E78E24 /* Main.storyboard in Resources */,
 				B6A114882255FED600E78E24 /* MasterTableViewCell.xib in Resources */,
 			);
@@ -289,10 +289,10 @@
 			files = (
 				B6A114542255FDB000E78E24 /* DetailViewController.swift in Sources */,
 				B6A114872255FED600E78E24 /* MasterTableViewCell.swift in Sources */,
+				B6A114D52256544700E78E24 /* ImageAndTextView2.swift in Sources */,
 				B6A114522255FDB000E78E24 /* MasterViewController.swift in Sources */,
 				B6A114D42256527C00E78E24 /* ScaledHeightImageView.swift in Sources */,
 				B6A114502255FDB000E78E24 /* AppDelegate.swift in Sources */,
-				B6A114942256448F00E78E24 /* ImageOnly.swift in Sources */,
 				B6A114842255FDE500E78E24 /* ModelObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

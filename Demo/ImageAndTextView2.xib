@@ -17,18 +17,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhq-U1-CcY">
-                    <rect key="frame" x="0.0" y="300" width="320" height="105"/>
+                    <rect key="frame" x="0.0" y="305" width="320" height="100"/>
                     <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="310" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-3L-t5F">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="310" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-3L-t5F" customClass="ScaledHeightImageView" customModule="Demo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
                     <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="300" id="A0R-d1-ctc"/>
-                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.13226101809999999" green="0.90887230500000005" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,7 +41,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="heightImage" destination="A0R-d1-ctc" id="JJ5-sc-Yse"/>
                 <outlet property="labelText" destination="mhq-U1-CcY" id="ScQ-Ve-oie"/>
                 <outlet property="viewImage" destination="X5k-3L-t5F" id="7v2-sC-LvB"/>
             </connections>

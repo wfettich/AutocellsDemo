@@ -11,7 +11,7 @@ import AVFoundation
 
 class ImageAndTextView2: UIView
 {
-    @IBOutlet weak var viewImage: UIImageView!
+    @IBOutlet weak var viewImage: ScaledHeightImageView!
     @IBOutlet weak var viewText: UITextView!
     @IBOutlet weak var labelText: UILabel!
     
@@ -42,40 +42,6 @@ class ImageAndTextView2: UIView
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    
-    override func layoutSubviews()
-    {
-        super.layoutSubviews()
-        
-        if let image = viewImage.image
-        {
-            viewImage.image = image
-            
-            let largeRect = CGRect(x: 0, y: 0, width: viewImage.bounds.size.width, height: 1000)
-            let neededBounds = AVMakeRect(aspectRatio: image.size, insideRect: largeRect)
-            heightImage.constant = neededBounds.size.height
-            setNeedsUpdateConstraints()
-        }
-    }
-    
-
-    override func systemLayoutSizeFitting(_ targetSize: CGSize) -> CGSize
-    {
-        var calculatedSize = super.systemLayoutSizeFitting(targetSize)
-        
-        return calculatedSize
-        /*
-        let largeSize = CGSize(width:calculatedSize,height:5000)
-        let neededSize = self.viewText.sizeThatFits(largeSize)
-        
-        if self.viewText.bounds.height < neededSize.height
-        {
-            heightTextView.constant = neededSize.height
-            
-            setNeedsUpdateConstraints()
-        }
-         */
-    }
     
     override func awakeAfter(using aDecoder: NSCoder) -> Any? {
         guard subviews.isEmpty else {
