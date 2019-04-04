@@ -15,8 +15,6 @@ class ImageAndTextView: UIView
     @IBOutlet weak var viewText: UITextView!
     @IBOutlet weak var labelText: UILabel!
     
-    @IBOutlet weak var heightTextView: NSLayoutConstraint!
-    
     var modelObject:ModelObject?
     {
         didSet
@@ -33,10 +31,8 @@ class ImageAndTextView: UIView
             }
             
             viewText.text = "text view: " + (modelObject!.text ?? "")  + " END text view"
-            viewText.isHidden = true
-            labelText.text = "label: " + (modelObject!.text ?? "") + " END label"
             
-            setNeedsLayout()
+            labelText.text = "label: " + (modelObject!.text ?? "") + " END label"
         }
     }
     

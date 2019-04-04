@@ -29,12 +29,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-Fa-kaW">
                             <rect key="frame" x="0.0" y="300" width="320" height="200"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1kE-C7-QMS"/>
-                            </constraints>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -53,7 +50,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="heightTextView" destination="1kE-C7-QMS" id="MjD-R8-30K"/>
                 <outlet property="labelText" destination="mhq-U1-CcY" id="ScQ-Ve-oie"/>
                 <outlet property="viewImage" destination="X5k-3L-t5F" id="7v2-sC-LvB"/>
                 <outlet property="viewText" destination="0EP-Fa-kaW" id="xgA-8b-cBx"/>
