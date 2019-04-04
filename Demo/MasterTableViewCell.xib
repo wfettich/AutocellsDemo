@@ -19,21 +19,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-Ze-uEq">
+                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-Oo-gGG" customClass="ImageAndTextView2" customModule="Demo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-Oo-gGG" customClass="ImageAndTextView" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                    </stackView>
+                        <color key="backgroundColor" red="1" green="0.41960784309999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="FMS-Ze-uEq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Po-OD-C5G"/>
-                    <constraint firstAttribute="trailing" secondItem="FMS-Ze-uEq" secondAttribute="trailing" id="b9I-9l-Dxo"/>
-                    <constraint firstAttribute="bottom" secondItem="FMS-Ze-uEq" secondAttribute="bottom" id="cMZ-3H-ezi"/>
-                    <constraint firstItem="FMS-Ze-uEq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zbF-uG-FVv"/>
+                    <constraint firstAttribute="trailing" secondItem="pfP-Oo-gGG" secondAttribute="trailing" id="eTO-Xv-fAT"/>
+                    <constraint firstItem="pfP-Oo-gGG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gaR-lb-1gP"/>
+                    <constraint firstItem="pfP-Oo-gGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mwH-Rf-EvJ"/>
+                    <constraint firstAttribute="bottom" secondItem="pfP-Oo-gGG" secondAttribute="bottom" id="xQB-04-c2w"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

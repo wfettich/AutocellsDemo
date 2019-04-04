@@ -71,7 +71,10 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MasterTableViewCell.self), for: indexPath) as! MasterTableViewCell
 
         let object = objects[indexPath.row]
+        
+        tableView.beginUpdates()
         cell.modelObject = object
+        tableView.endUpdates()
         return cell
     }
 

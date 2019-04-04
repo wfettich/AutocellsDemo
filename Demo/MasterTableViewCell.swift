@@ -10,7 +10,7 @@ import UIKit
 
 class MasterTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var viewImageAndText: ImageAndTextView!
+    @IBOutlet weak var viewImageAndText: ImageAndTextView2!
     
     var modelObject:ModelObject?
     {
@@ -22,6 +22,8 @@ class MasterTableViewCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        
+//        translatesAutoresizingMaskIntoConstraints = false
         // Initialization code
     }
     
