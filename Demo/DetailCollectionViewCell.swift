@@ -8,8 +8,10 @@
 
 import UIKit
 
-class DetailCollectionViewCell: UICollectionViewCell {
+class DetailCollectionViewCell: UICollectionViewCell
+{
 
+    var contentVC:DetailContentViewController?
 
     override func awakeFromNib()
     {
@@ -25,8 +27,10 @@ class DetailCollectionViewCell: UICollectionViewCell {
         
         let bvc = sb.instantiateInitialViewController() as! DetailContentViewController
 
+        contentVC = bvc
         addSubviewWithConstraints(bvc.view)
         
+        setNeedsUpdateConstraints()
         //        bvc!.parentCtrl = self
         //        bvc!.business = businesses[index]
         //        let nrs = bvc!.tableView.numberOfSections

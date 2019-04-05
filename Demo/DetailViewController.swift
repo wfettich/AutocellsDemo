@@ -34,7 +34,7 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: view.frame.size.width, height: view.frame.size.height);
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height);
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int
@@ -51,11 +51,20 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DetailCollectionViewCell.self), for: indexPath) as! DetailCollectionViewCell
         
-        cell.createContentViewController()
+        let bvc = cell.createContentViewController()
+        if cell.contentVC != nil
+        {
+            addChild(cell.contentVC!)
+        }
 //        cell.containerVC = self
 //        cell.business = businesses[indexPath.row]
 //        cell.isAccessibilityElement = false
         
         return cell;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+    {
+        (cell as! DetailCollectionViewCell).contentVC?.removeFromParent()
     }
 }
