@@ -21,10 +21,12 @@
 		B6A114D42256527C00E78E24 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114D32256527C00E78E24 /* ScaledHeightImageView.swift */; };
 		B6A114D7225655AD00E78E24 /* ImageAndTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A1147F2255FDDB00E78E24 /* ImageAndTextView.swift */; };
 		B6A114D8225655C500E78E24 /* ImageAndTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114802255FDDB00E78E24 /* ImageAndTextView.xib */; };
-		B6A114DF225758D700E78E24 /* DetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114DD225758D700E78E24 /* DetailContentViewController.swift */; };
-		B6A114E0225758D700E78E24 /* DetailContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114DE225758D700E78E24 /* DetailContentViewController.xib */; };
+		B6A114E0225758D700E78E24 /* ContentView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114DE225758D700E78E24 /* ContentView1.xib */; };
 		B6A114E3225759DA00E78E24 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114E1225759DA00E78E24 /* DetailCollectionViewCell.swift */; };
 		B6A114E4225759DA00E78E24 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A114E2225759DA00E78E24 /* DetailCollectionViewCell.xib */; };
+		B6A114E62257716600E78E24 /* DetailContentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A114E52257716600E78E24 /* DetailContentViewController.storyboard */; };
+		B6A114E82257723000E78E24 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114E72257723000E78E24 /* ContentView1.swift */; };
+		B6A114EA225772D200E78E24 /* DetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A114E9225772D200E78E24 /* DetailContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +67,12 @@
 		B6A114852255FED600E78E24 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		B6A114862255FED600E78E24 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
 		B6A114D32256527C00E78E24 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
-		B6A114DD225758D700E78E24 /* DetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewController.swift; sourceTree = "<group>"; };
-		B6A114DE225758D700E78E24 /* DetailContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailContentViewController.xib; sourceTree = "<group>"; };
+		B6A114DE225758D700E78E24 /* ContentView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentView1.xib; sourceTree = "<group>"; };
 		B6A114E1225759DA00E78E24 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6A114E2225759DA00E78E24 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6A114E52257716600E78E24 /* DetailContentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailContentViewController.storyboard; sourceTree = "<group>"; };
+		B6A114E72257723000E78E24 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
+		B6A114E9225772D200E78E24 /* DetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +135,11 @@
 				B6A114852255FED600E78E24 /* MasterTableViewCell.swift */,
 				B6A114862255FED600E78E24 /* MasterTableViewCell.xib */,
 				B6A1145D2255FDB100E78E24 /* Info.plist */,
+				B6A114E72257723000E78E24 /* ContentView1.swift */,
+				B6A114DE225758D700E78E24 /* ContentView1.xib */,
 				B6A114D32256527C00E78E24 /* ScaledHeightImageView.swift */,
-				B6A114DD225758D700E78E24 /* DetailContentViewController.swift */,
-				B6A114DE225758D700E78E24 /* DetailContentViewController.xib */,
+				B6A114E9225772D200E78E24 /* DetailContentViewController.swift */,
+				B6A114E52257716600E78E24 /* DetailContentViewController.storyboard */,
 				B6A114E1225759DA00E78E24 /* DetailCollectionViewCell.swift */,
 				B6A114E2225759DA00E78E24 /* DetailCollectionViewCell.xib */,
 			);
@@ -264,9 +270,10 @@
 			files = (
 				B6A1145C2255FDB100E78E24 /* LaunchScreen.storyboard in Resources */,
 				B6A114E4225759DA00E78E24 /* DetailCollectionViewCell.xib in Resources */,
+				B6A114E62257716600E78E24 /* DetailContentViewController.storyboard in Resources */,
 				B6A114592255FDB100E78E24 /* Assets.xcassets in Resources */,
 				B6A114572255FDB000E78E24 /* Main.storyboard in Resources */,
-				B6A114E0225758D700E78E24 /* DetailContentViewController.xib in Resources */,
+				B6A114E0225758D700E78E24 /* ContentView1.xib in Resources */,
 				B6A114882255FED600E78E24 /* MasterTableViewCell.xib in Resources */,
 				B6A114D8225655C500E78E24 /* ImageAndTextView.xib in Resources */,
 			);
@@ -296,11 +303,12 @@
 				B6A114542255FDB000E78E24 /* DetailViewController.swift in Sources */,
 				B6A114872255FED600E78E24 /* MasterTableViewCell.swift in Sources */,
 				B6A114522255FDB000E78E24 /* MasterViewController.swift in Sources */,
-				B6A114DF225758D700E78E24 /* DetailContentViewController.swift in Sources */,
 				B6A114D42256527C00E78E24 /* ScaledHeightImageView.swift in Sources */,
 				B6A114502255FDB000E78E24 /* AppDelegate.swift in Sources */,
 				B6A114842255FDE500E78E24 /* ModelObject.swift in Sources */,
+				B6A114EA225772D200E78E24 /* DetailContentViewController.swift in Sources */,
 				B6A114D7225655AD00E78E24 /* ImageAndTextView.swift in Sources */,
+				B6A114E82257723000E78E24 /* ContentView1.swift in Sources */,
 				B6A114E3225759DA00E78E24 /* DetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

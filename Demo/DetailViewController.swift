@@ -25,8 +25,6 @@ class DetailViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        
         collectionView.register(UINib(nibName: String(describing: DetailCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: DetailCollectionViewCell.self))
         
     }
@@ -53,6 +51,7 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DetailCollectionViewCell.self), for: indexPath) as! DetailCollectionViewCell
         
+        cell.createContentViewController()
 //        cell.containerVC = self
 //        cell.business = businesses[indexPath.row]
 //        cell.isAccessibilityElement = false
