@@ -13,7 +13,7 @@ class DetailViewController: UIViewController
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var detailItem: ModelObject? {
+    var modelObject: ModelObject? {
         didSet {
             // Update the view.
 //            configureView()
@@ -52,6 +52,7 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DetailCollectionViewCell.self), for: indexPath) as! DetailCollectionViewCell
         
         let bvc = cell.createContentViewController()
+        cell.modelObject = modelObject
         if cell.contentVC != nil
         {
             addChild(cell.contentVC!)

@@ -8,8 +8,17 @@
 
 import UIKit
 
-class DetailContentViewController: UITableViewController {
+class DetailContentViewController: UITableViewController
+{
+    @IBOutlet weak var viewContent1: ContentView1!
 
+    var modelObject: ModelObject? {
+        didSet {
+            viewContent1.modelObject = modelObject
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,8 +10,15 @@ import UIKit
 
 class DetailCollectionViewCell: UICollectionViewCell
 {
-
     var contentVC:DetailContentViewController?
+    
+    @IBOutlet weak var detailContentView: UIView!
+    
+    var modelObject: ModelObject? {
+        didSet {
+            contentVC?.modelObject = modelObject
+        }
+    }
 
     override func awakeFromNib()
     {
@@ -28,7 +35,7 @@ class DetailCollectionViewCell: UICollectionViewCell
         let bvc = sb.instantiateInitialViewController() as! DetailContentViewController
 
         contentVC = bvc
-        addSubviewWithConstraints(bvc.view)
+        detailContentView.addSubviewWithConstraints(bvc.view)
         
         setNeedsUpdateConstraints()
         //        bvc!.parentCtrl = self

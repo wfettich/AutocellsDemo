@@ -39,6 +39,10 @@
                 <constraint firstItem="Ax6-os-aEk" firstAttribute="leading" secondItem="zeg-9C-X8G" secondAttribute="leading" constant="40" id="v75-1x-GEY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="zeg-9C-X8G"/>
+            <connections>
+                <outlet property="detailDescriptionLabel" destination="xyn-Pk-moU" id="0v0-cw-cha"/>
+                <outlet property="imageView" destination="Ax6-os-aEk" id="rC1-Qd-y3F"/>
+            </connections>
         </view>
     </objects>
 </document>
