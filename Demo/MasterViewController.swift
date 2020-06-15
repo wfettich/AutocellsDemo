@@ -25,16 +25,21 @@ class MasterViewController: UITableViewController {
 //            let controllers = split.viewControllers
 //            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
 //        }
-        
+    
         tableView.register(UINib(nibName: String(describing: MasterTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MasterTableViewCell.self))
+        
+        insertNewObject(nil)
+        insertNewObject(nil)
+        insertNewObject(nil)
     }
 
-    override func viewWillAppear(_ animated: Bool) {        
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
     }
 
     @objc
-    func insertNewObject(_ sender: Any)
+    func insertNewObject(_ sender: Any?)
     {
         let newObject = ModelObject.dummy()
         
