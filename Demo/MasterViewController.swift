@@ -21,16 +21,15 @@ class MasterViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
+//        if let split = splitViewController {
+//            let controllers = split.viewControllers
+//            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+//        }
         
         tableView.register(UINib(nibName: String(describing: MasterTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MasterTableViewCell.self))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+    override func viewWillAppear(_ animated: Bool) {        
         super.viewWillAppear(animated)
     }
 
@@ -52,7 +51,7 @@ class MasterViewController: UITableViewController {
                 let object = model.objects[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.modelObject = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
