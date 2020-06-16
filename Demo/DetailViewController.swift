@@ -10,23 +10,24 @@ import UIKit
 
 class DetailViewController: UIViewController
 {
-
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var modelObject: ModelObject? {
-        didSet {
-            // Update the view.
-//            configureView()
-        }
-    }
+    var modelObject: ModelObject?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(goBack))
+        
         collectionView.register(UINib(nibName: String(describing: DetailCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: DetailCollectionViewCell.self))
         
+    }
+    
+    @objc func goBack()
+    {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -51,7 +52,7 @@ extension DetailViewController : UICollectionViewDataSource, UICollectionViewDel
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: DetailCollectionViewCell.self), for: indexPath) as! DetailCollectionViewCell
         
-        let bvc = cell.createContentViewController()
+        _ = cell.createContentViewController()
         cell.modelObject = modelObject
         if cell.contentVC != nil
         {

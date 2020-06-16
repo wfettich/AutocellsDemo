@@ -51,7 +51,7 @@ class DetailContentViewController: UITableViewController
         }
         else
         {
-            cell.cellContent.modelObject = otherObjects[indexPath.row - 1] 
+            cell.cellContent.modelObject = otherObjects[indexPath.row - 1]
         }
         // Configure the cell...
 
@@ -110,7 +110,4 @@ class DetailContentViewController: UITableViewController
 class DetailCell:UITableViewCell
 {
     @IBOutlet weak var cellContent: ContentView1!
-    static var reuseIdentifier: String {
-        return String(describing: self)
-    }
 }
