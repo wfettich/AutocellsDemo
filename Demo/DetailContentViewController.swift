@@ -10,15 +10,14 @@ import UIKit
 
 class DetailContentViewController: UITableViewController
 {
-    @IBOutlet weak var viewContent1: ContentView1!
-
-    var modelObject: ModelObject? {
-        didSet {
-            viewContent1.modelObject = modelObject
-        }
-    }
+    var modelObject: ModelObject?
     
-    
+    var otherObjects =
+    [
+        ModelObject.dummy(),
+        ModelObject.dummy()
+    ]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +26,7 @@ class DetailContentViewController: UITableViewController
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+                
     }
 
     // MARK: - Table view data source
@@ -36,20 +36,28 @@ class DetailContentViewController: UITableViewController
 //        return 0
 //    }
 //
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return otherObjects.count + 1
+    }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> DetailCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
 
+        if indexPath.row == 0
+        {
+            cell.cellContent.modelObject = modelObject
+        }
+        else
+        {
+            cell.cellContent.modelObject = otherObjects[indexPath.row - 1] 
+        }
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,4 +104,13 @@ class DetailContentViewController: UITableViewController
     }
     */
 
+}
+
+
+class DetailCell:UITableViewCell
+{
+    @IBOutlet weak var cellContent: ContentView1!
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
 }

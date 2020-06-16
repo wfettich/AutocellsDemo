@@ -17,6 +17,8 @@ class MasterTableViewCell: UITableViewCell
         didSet
         {
             viewImageAndText.modelObject = modelObject
+            
+            viewImageAndText.labelText.text = "CLICK TO SEE DETAIL: TableView \n\n" + viewImageAndText.labelText.text!
         }
     }
     override func awakeFromNib()

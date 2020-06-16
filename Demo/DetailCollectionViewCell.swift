@@ -14,7 +14,8 @@ class DetailCollectionViewCell: UICollectionViewCell
     
     @IBOutlet weak var detailContentView: UIView!
     
-    var modelObject: ModelObject? {
+    var modelObject: ModelObject?
+    {
         didSet {
             contentVC?.modelObject = modelObject
         }
@@ -35,6 +36,7 @@ class DetailCollectionViewCell: UICollectionViewCell
         let bvc = sb.instantiateInitialViewController() as! DetailContentViewController
 
         contentVC = bvc
+        contentVC?.modelObject = modelObject
         detailContentView.addSubviewWithConstraints(bvc.view)
         
         setNeedsUpdateConstraints()

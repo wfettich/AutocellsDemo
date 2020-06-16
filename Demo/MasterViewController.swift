@@ -78,7 +78,8 @@ class MasterViewController: UITableViewController {
         performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MasterTableViewCell.self), for: indexPath) as! MasterTableViewCell
 
         let object = model.objects[indexPath.row]
